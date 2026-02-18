@@ -1,0 +1,114 @@
+/* Base */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; line-height: 1.7; }
+img { max-width: 100%; height: auto; }
+a { color: inherit; }
+.container { width: min(1100px, 92%); margin-inline: auto; }
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+}
+.skip-link:focus {
+  left: 12px; top: 12px; background: #fff; padding: 8px 10px; border: 1px solid #000;
+}
+
+.section { padding: 64px 0; }
+.section-alt { background: #f7f7f7; }
+.section-title { margin: 0 0 24px; font-size: 28px; }
+
+.note { font-size: 14px; opacity: 0.8; }
+
+/* Header */
+.site-header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #e7e7e7; z-index: 10; }
+.header-inner { display: flex; align-items: center; gap: 16px; padding: 12px 0; }
+.site-logo { margin: 0; font-weight: 700; }
+.site-logo a { text-decoration: none; }
+.site-nav ul { list-style: none; display: flex; gap: 12px; padding: 0; margin: 0; }
+.site-nav a { text-decoration: none; padding: 6px 8px; border-radius: 6px; }
+.site-nav a:hover { background: #f1f1f1; }
+.header-cta { margin-left: auto; display: flex; gap: 8px; }
+
+/* Buttons */
+.btn {
+  display: inline-block; padding: 10px 14px; border-radius: 10px;
+  background: #111; color: #fff; text-decoration: none; border: 1px solid #111;
+}
+.btn-outline { background: transparent; color: #111; }
+
+/* Hero */
+.hero { padding: 72px 0; }
+.hero {
+  padding: 72px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+}
+.card { transition: transform 0.15s ease; }
+.card:hover { transform: translateY(-2px); }
+.hero-inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: center; }
+.hero h1 { margin: 0 0 10px; font-size: 40px; line-height: 1.2; }
+.lead { margin: 0 0 18px; font-size: 18px; }
+.hero-cta { display: flex; gap: 10px; flex-wrap: wrap; }
+.placeholder {
+  background: #e9e9e9; border: 1px dashed #bdbdbd; border-radius: 14px;
+  min-height: 280px; display: grid; place-items: center;
+}
+
+/* Cards */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card { background: #fff; border: 1px solid #e7e7e7; border-radius: 14px; padding: 16px; }
+.card h3 { margin: 0 0 8px; font-size: 18px; }
+
+/* Lists */
+.list-check { list-style: "✓  "; padding-left: 20px; }
+.timeline { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.timeline li { display: grid; grid-template-columns: 80px 1fr; gap: 10px; padding: 10px 12px; background: #fff; border: 1px solid #e7e7e7; border-radius: 12px; }
+.time { font-weight: 700; }
+
+/* Price */
+.price-box { background: #fff; border: 1px solid #e7e7e7; border-radius: 14px; padding: 16px; }
+.price-lead { margin: 0 0 8px; font-size: 18px; }
+
+/* News */
+.news { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.news li { padding: 12px; background: #fff; border: 1px solid #e7e7e7; border-radius: 12px; }
+
+/* FAQ */
+.faq { display: grid; gap: 10px; }
+.faq-q {
+  width: 100%; text-align: left; padding: 12px 14px; border-radius: 12px;
+  border: 1px solid #e7e7e7; background: #fff; font-weight: 700;
+}
+.faq-a { padding: 12px 14px; border: 1px solid #e7e7e7; border-radius: 12px; background: #fff; }
+.faq-a p { margin: 0; }
+
+/* Access */
+.access { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.map { min-height: 220px; }
+
+/* Form */
+.form { background: #fff; border: 1px solid #e7e7e7; border-radius: 14px; padding: 16px; }
+.form-row { display: grid; gap: 8px; margin-bottom: 12px; }
+input, select, textarea {
+  width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid #d6d6d6;
+}
+
+/* Footer */
+.site-footer { border-top: 1px solid #e7e7e7; padding: 18px 0; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+.hero-media img,
+.map img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .access { grid-template-columns: 1fr; }
+  .site-nav { display: none; } /* まずは簡単に。余裕あればハンバーガー実装 */
+  .header-cta { margin-left: 0; }
+}
