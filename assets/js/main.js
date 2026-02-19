@@ -13,10 +13,9 @@ $(function () {
       $answer.removeAttr('hidden');
     }
   });
-});
-
- // slick slider
+  // slick slider
   if ($('.facility-slider').length) {
+  if ($('.facility-slider').length && $.fn.slick) {
     $('.facility-slider').slick({
       dots: true,
       arrows: true,
@@ -25,3 +24,5 @@ $(function () {
       pauseOnHover: true
     });
   }
+  }
+});
