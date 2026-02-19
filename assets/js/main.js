@@ -14,3 +14,14 @@ $(function () {
     }
   });
 });
+
+ // slick slider
+  if ($('.facility-slider').length) {
+    $('.facility-slider').slick({
+      dots: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      pauseOnHover: true
+    });
+  }

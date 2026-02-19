@@ -104,6 +104,11 @@ input, select, textarea {
   display: block;
 }
 
+/*slickslider*/
+.slider-wrap { margin-top: 18px; }
+.facility-slider img { width: 100%; border-radius: 14px; display: block; }
+.facility-slider .slick-slide { padding: 0 6px; }
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
