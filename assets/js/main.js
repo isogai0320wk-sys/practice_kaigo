@@ -14,8 +14,7 @@ $(function () {
     }
   });
   // slick slider
-  if ($('.facility-slider').length) {
-  if ($('.facility-slider').length && $.fn.slick) {
+ if ($('.facility-slider').length && $.fn.slick) {
     $('.facility-slider').slick({
       dots: true,
       arrows: true,
@@ -23,6 +22,5 @@ $(function () {
       autoplaySpeed: 3000,
       pauseOnHover: true
     });
-  }
   }
 });
